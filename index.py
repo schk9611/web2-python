@@ -5,10 +5,12 @@ print()
 form = cgi.FieldStorage()
 if 'id' in form:
     pageId = form.getvalue("id")
+    description = open('data/'+pageId, 'r').read()
 else:
     pageId = 'Welcome'
+    description = 'Hello, web'
 print('''<!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +25,7 @@ print('''<!DOCTYPE html>
         <li><a href="index.py?id=JavaScript">JavaScript</a></li>
     </ol>
     <h2>{title}</h2>
-    <p>The World Wide Web (WWW), commonly known as the Web, is the world's dominant software platform. It is an information space where documents and other web resources can be accessed through the Internet using a web browser. The Web has changed people's lives immeasurably.It is the primary tool billions of people worldwide use to interact on the Internet.</p>
+    <p>{desc}</p>
 </body>
 </html>'''
-      .format(title=pageId))
+      .format(title=pageId, desc=description))
