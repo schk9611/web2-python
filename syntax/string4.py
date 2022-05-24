@@ -5,4 +5,4 @@
 print('to {}, dnkefn dvmdl lkne dcod {} wpeoe zausid eiwjen cvje aice {} davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv {} qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein'.format('name', 12, 'name', 'name'))
 
 # named placeholder
-print('to {name}, dnkefn dvmdl lkne dcod {age} wpeoe zausid eiwjen cvje aice {name} davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv {name} qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein'.format(name='hendy', age=12))
+print('to {name}, dnkefn dvmdl lkne dcod {age:d} wpeoe zausid eiwjen cvje aice {name} davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv {name} qpeein davne cizjv qpeein davne cizjv qpeein davne cizjv qpeein'.format(name='hendy', age=12))
