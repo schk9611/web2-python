@@ -7,10 +7,10 @@ files = os.listdir('data')
 listStr = ''
 for item in files:
     listStr = listStr + \
-        '<li><a href="index.py?id="{name}">{name}</a></li>'.format(name=item)
+        '<li><a href="index.py?id={name}">{name}</a></li>'.format(name=item)
 form = cgi.FieldStorage()
 if 'id' in form:
-    pageId = form.getvalue("id")
+    pageId = form["id"].value
     description = open('data/'+pageId, 'r').read()
 else:
     pageId = 'Welcome'
@@ -26,6 +26,7 @@ print('''<!DOCTYPE html>
     <ol>
         {listStr}
     </ol>
+    <a href="create.py">create</a>
     <h2>{title}</h2>
     <p>{desc}</p>
 </body>
