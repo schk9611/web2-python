@@ -1,7 +1,4 @@
 # print(Hello world) -> error 발생
-from tkinter import E
-
-
 print('Hello world')
 print("Hello world")
 
