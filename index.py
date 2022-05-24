@@ -3,7 +3,10 @@ import cgi
 print("Content-Type: text/html")
 print()
 form = cgi.FieldStorage()
-pageId = form.getvalue("id")
+if 'id' in form:
+    pageId = form.getvalue("id")
+else:
+    pageId = 'Welcome'
 print('''<!DOCTYPE html>
 <html lang="ko">
 <head>
