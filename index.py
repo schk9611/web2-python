@@ -1,19 +1,9 @@
 #!/usr/local/bin/python3
 import os
 import cgi
+import view
 print("Content-Type: text/html")
 print()
-
-
-def getList():
-    files = os.listdir('data')
-    listStr = ''
-    for item in files:
-        listStr = listStr + \
-            '<li><a href="index.py?id={name}">{name}</a></li>'.format(
-                name=item)
-    return listStr
-
 
 form = cgi.FieldStorage()
 if 'id' in form:
@@ -52,7 +42,7 @@ print('''<!doctype html>
 '''.format(
     title=pageId,
     desc=description,
-    listStr=getList(),
+    listStr=view.getList(),
     update_link=update_link,
     delete_action=delete_action
 ))
